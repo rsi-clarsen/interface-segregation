@@ -66,16 +66,16 @@ public class Printer implements Machine {
 
 It would be better to separate out each of the methods so clients could compose the machine that works best for their needs.  This would make it easier for the client to create the printer.
 
-[Printer](src/main/java/com/clarsen/designpatterns/isp/good/types/Printer.java)
+[Print](src/main/java/com/clarsen/designpatterns/isp/good/types/Print.java)
 ```
-public interface Printer {
+public interface Print {
     void print(Document d);
 }
 ```
 
-[PrinterMachine](src/main/java/com/clarsen/designpatterns/isp/good/machines/PrinterMachine.java)
+[Printer](src/main/java/com/clarsen/designpatterns/isp/good/machines/Printer.java)
 ```
-public class PrinterMachine implements Printer {
+public class Printer implements Printer {
 
     @Override
     public void print(Document d) {
